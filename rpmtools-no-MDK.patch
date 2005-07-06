@@ -1,0 +1,13 @@
+--- rpmtools-5.0.20/Makefile.PL~	2005-07-06 08:24:14.000000000 +0300
++++ rpmtools-5.0.20/Makefile.PL	2005-07-06 08:24:32.000000000 +0300
+@@ -2,9 +2,8 @@
+ 
+ # use 5.008;
+ use ExtUtils::MakeMaker;
+-use MDK::Common qw(cat_);
+ 
+-(my $rpmtools_version) = cat_('rpmtools.spec') =~ /define\s+version\s+(\d+\.\d+\.\d+)/
++(my $rpmtools_version) = `cat rpmtools.spec` =~ /define\s+version\s+(\d+\.\d+\.\d+)/
+     or die "no version found\n";
+ 
+ 
