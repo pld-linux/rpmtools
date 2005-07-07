@@ -3,26 +3,27 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %define rpm_version %(rpm -q --queryformat '%{version}-%{release}' rpm)
-Name:		rpmtools
 Summary:	Contains various rpm command-line tools
+Summary(pl):	Ró¿ne narzêdzia linii poleceñ dla rpm-a
+Name:		rpmtools
 Version:	5.0.20
 Release:	0.1
+License:	GPL
+Group:		Base/Utilities
 # get the source from mdk cvs repository (see http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-no-MDK.patch
-License:	GPL
-Group:		Base/Utilities
 URL:		http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/rpmtools
-BuildRequires:	rpm-devel >= 4.0.3
 BuildRequires:	bzip2-devel
-BuildRequires:	perl-devel
 BuildRequires:	perl-Compress-Zlib
-Requires:	rpm >= %{rpm_version}
+BuildRequires:	perl-devel
+BuildRequires:	rpm-devel >= 4.0.3
 Requires:	bzip2 >= 1.0
 Requires:	perl-URPM >= 0.94
+Requires:	rpm >= %{rpm_version}
+Conflicts:	packdrake < 5.0.10
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
-Conflicts:	packdrake < 5.0.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # perl-Compress-Zlib is only "suggested"
@@ -31,11 +32,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Various tools needed by urpmi and drakxtools for handling rpm files.
 
+%description -l pl
+Ró¿ne narzêdzia wymagane przez urpmi i drakxtools do obs³ugi plików
+rpm.
+
 %package -n packdrake
 Summary:	A simple Archive Extractor/Builder
+Summary(pl):	Proste narzêdzie do rozpakowywania i tworzenia archiwów
 Group:		Base/Utilities
-Conflicts:	rpmtools <= 5.0.0
 Provides:	perl(packdrake)
+Conflicts:	rpmtools <= 5.0.0
 
 %description -n packdrake
 Packdrake is a simple indexed archive builder and extractor using
@@ -44,17 +50,27 @@ standard compression methods.
 Packadrakeng is a from scratch rewrite of the original packdrake. Its
 format is fully compatible with old packdrake.
 
+%description -n packdrake -l pl
+Packdrake to proste narzêdzie do tworzenia i rozpakowywania
+indeksowanych archiwów przy u¿yciu standardowych metod kompresji.
+
+Packadrakeng to przepisanie od nowa oryginalnego packdrake'a. Jego
+format jest w pe³ni kompatybilny ze starym packdrake'iem.
+
 %prep
 %setup -q
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 %{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
