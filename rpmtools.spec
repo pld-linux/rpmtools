@@ -71,7 +71,7 @@ format jest w pe³ni kompatybilny ze starym packdrake'iem.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
