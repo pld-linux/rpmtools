@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%define rpm_version %(rpm -q --queryformat '%{version}-%{release}' rpm)
 Summary:	Contains various rpm command-line tools
 Summary(pl):	Ró¿ne narzêdzia linii poleceñ dla rpm-a
 Name:		rpmtools
@@ -22,7 +21,6 @@ BuildRequires:	perl-devel
 BuildRequires:	rpm-devel >= 4.0.3
 Requires:	bzip2 >= 1.0
 Requires:	perl-URPM >= 0.94
-Requires:	rpm >= %{rpm_version}
 Conflicts:	packdrake < 5.0.10
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
