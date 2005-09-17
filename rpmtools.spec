@@ -10,10 +10,12 @@ Version:	5.0.20
 Release:	0.1
 License:	GPL
 Group:		Base/Utilities
-# get the source from mdk cvs repository (see http://www.linuxmandrake.com/en/cvs.php3)
+# ftp://www.gtlib.gatech.edu/pub/mandrake/official/current/SRPMS/main/rpmtools-5.0.20-1mdk.src.rpm
+# ftp://www.gtlib.gatech.edu/pub/mandrake/devel/cooker/SRPMS/main/rpmtools-5.0.24-1mdk.src.rpm
 Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	77c12081f7ec39e5b5013c9291f6ea55
 Patch0:		%{name}-no-MDK.patch
-URL:		http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/rpmtools
+URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmtools/
 BuildRequires:	bzip2-devel
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-devel
