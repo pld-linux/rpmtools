@@ -6,14 +6,14 @@
 Summary:	Contains various rpm command-line tools
 Summary(pl):	Ró¿ne narzêdzia linii poleceñ dla rpm-a
 Name:		rpmtools
-Version:	5.0.20
-Release:	0.1
+Version:	5.0.24
+Release:	1
 License:	GPL
 Group:		Base/Utilities
-# ftp://www.gtlib.gatech.edu/pub/mandrake/official/current/SRPMS/main/rpmtools-5.0.20-1mdk.src.rpm
-# ftp://www.gtlib.gatech.edu/pub/mandrake/devel/cooker/SRPMS/main/rpmtools-5.0.24-1mdk.src.rpm
+# ftp://ftp.aso.ee/pub/Mandrake/official/current/SRPMS/main/rpmtools-5.0.20-1mdk.src.rpm
+# ftp://ftp.aso.ee/pub/Mandrake/devel/cooker/SRPMS/main/rpmtools-5.0.24-1mdk.src.rpm
 Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	77c12081f7ec39e5b5013c9291f6ea55
+# Source0-md5:	a3f57fe905a0bc5b476238313e01a4a1
 Patch0:		%{name}-no-MDK.patch
 URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmtools/
 BuildRequires:	bzip2-devel
