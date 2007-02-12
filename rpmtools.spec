@@ -3,7 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 Summary:	Contains various rpm command-line tools
-Summary(pl.UTF-8):   Różne narzędzia linii poleceń dla rpm-a
+Summary(pl.UTF-8):	Różne narzędzia linii poleceń dla rpm-a
 Name:		rpmtools
 Version:	5.0.24
 Release:	1
@@ -38,7 +38,7 @@ rpm.
 
 %package -n packdrake
 Summary:	A simple Archive Extractor/Builder
-Summary(pl.UTF-8):   Proste narzędzie do rozpakowywania i tworzenia archiwów
+Summary(pl.UTF-8):	Proste narzędzie do rozpakowywania i tworzenia archiwów
 Group:		Base/Utilities
 Provides:	perl(packdrake)
 Conflicts:	rpmtools <= 5.0.0
