@@ -3,7 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 Summary:	Contains various rpm command-line tools
-Summary(pl):	Ró¿ne narzêdzia linii poleceñ dla rpm-a
+Summary(pl.UTF-8):   RÃ³Å¼ne narzÄ™dzia linii poleceÅ„ dla rpm-a
 Name:		rpmtools
 Version:	5.0.24
 Release:	1
@@ -32,13 +32,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Various tools needed by urpmi and drakxtools for handling rpm files.
 
-%description -l pl
-Ró¿ne narzêdzia wymagane przez urpmi i drakxtools do obs³ugi plików
+%description -l pl.UTF-8
+RÃ³Å¼ne narzÄ™dzia wymagane przez urpmi i drakxtools do obsÅ‚ugi plikÃ³w
 rpm.
 
 %package -n packdrake
 Summary:	A simple Archive Extractor/Builder
-Summary(pl):	Proste narzêdzie do rozpakowywania i tworzenia archiwów
+Summary(pl.UTF-8):   Proste narzÄ™dzie do rozpakowywania i tworzenia archiwÃ³w
 Group:		Base/Utilities
 Provides:	perl(packdrake)
 Conflicts:	rpmtools <= 5.0.0
@@ -50,12 +50,12 @@ standard compression methods.
 Packadrakeng is a from scratch rewrite of the original packdrake. Its
 format is fully compatible with old packdrake.
 
-%description -n packdrake -l pl
-Packdrake to proste narzêdzie do tworzenia i rozpakowywania
-indeksowanych archiwów przy u¿yciu standardowych metod kompresji.
+%description -n packdrake -l pl.UTF-8
+Packdrake to proste narzÄ™dzie do tworzenia i rozpakowywania
+indeksowanych archiwÃ³w przy uÅ¼yciu standardowych metod kompresji.
 
 Packadrakeng to przepisanie od nowa oryginalnego packdrake'a. Jego
-format jest w pe³ni kompatybilny ze starym packdrake'iem.
+format jest w peÅ‚ni kompatybilny ze starym packdrake'iem.
 
 %prep
 %setup -q
