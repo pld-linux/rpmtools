@@ -6,7 +6,7 @@ Summary:	Contains various rpm command-line tools
 Summary(pl.UTF-8):	Różne narzędzia linii poleceń dla rpm-a
 Name:		rpmtools
 Version:	5.0.24
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base/Utilities
 # ftp://ftp.aso.ee/pub/Mandrake/official/current/SRPMS/main/rpmtools-5.0.20-1mdk.src.rpm
